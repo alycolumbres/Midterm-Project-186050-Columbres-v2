@@ -11,9 +11,19 @@ class NewVisitorTest(unittest.TestCase):
 	def tearDown(self):
 		self.browser.quit()
 
-	# initial testing
-	def test_can_open_browser(self):
+	# employee opens website and sees the title
+	def test_can_open_website(self):
 		self.browser.get('http://localhost:8000')
+		self.assertIn('The Good Place FroYo Shop', self.browser.title)
+
+	# employee opens ingredients list page and checks title
+	def test_can_open_ingredients_list_page(self):
+		self.browser.get('http://localhost:8000/ingredients_list_page')
+		self.assertIn('Ingredients - List', self.browser.title)
+		self.assertEqual(
+			'http://localhost:8000/ingredients_list_page',
+			self.browser.getCurrentUrl()
+		)
 
 if __name__ == '__main__':
 	unittest.main(warnings = 'ignore')
