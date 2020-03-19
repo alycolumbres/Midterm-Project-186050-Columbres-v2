@@ -20,3 +20,21 @@ class IngredientsUpdateFormView(UpdateView):
 class IngredientsCreateFormView(CreateView):
 	model = None
 	template_name_suffix = '_create_form'
+
+
+class RecipesListView(ListView):
+	model = None
+
+
+class RecipesDetailView(DetailView):
+	model = None
+
+
+class RecipesUpdateFormView(UpdateView):
+	model = None
+	template_name_suffix = '_update_form'
+
+
+class RecipesCreateFormView(CreateView):
+	model = None
+	template_name_suffix = '_create_form'

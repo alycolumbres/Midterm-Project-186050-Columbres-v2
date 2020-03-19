@@ -53,5 +53,41 @@ class NewVisitorTest(unittest.TestCase):
 			self.browser.getCurrentUrl()
 		)
 
+	# employee opens recipes list page and checks title
+	def test_can_open_recipes_list_page(self):
+		self.browser.get('http://localhost:8000/recipes_list_page')
+		self.assertIn('Recipes - List', self.browser.title)
+		self.assertEqual(
+			'http://localhost:8000/recipes_list_page',
+			self.browser.getCurrentUrl()
+		)
+
+	# employee opens recipes detail page and checks title
+	def test_can_open_recipes_detail_page(self):
+		self.browser.get('http://localhost:8000/recipes_detail_page')
+		self.assertIn('Recipes - Detail', self.browser.title)
+		self.assertEqual(
+			'http://localhost:8000/recipes_detail_page',
+			self.browser.getCurrentUrl()
+		)
+
+	# employee opens recipes update form page and checks title
+	def test_can_open_recipes_update_form_page(self):
+		self.browser.get('http://localhost:8000/recipes_update_form_page')
+		self.assertIn('Recipes - Update', self.browser.title)
+		self.assertEqual(
+			'http://localhost:8000/recipes_update_form_page',
+			self.browser.getCurrentUrl()
+		)
+
+	# employee opens recipes create form page and checks title
+	def test_can_open_recipes_create_form_page(self):
+		self.browser.get('http://localhost:8000/recipes_create_form_page')
+		self.assertIn('Recipes - Create', self.browser.title)
+		self.assertEqual(
+			'http://localhost:8000/recipes_create_form_page',
+			self.browser.getCurrentUrl()
+		)
+
 if __name__ == '__main__':
 	unittest.main(warnings = 'ignore')
