@@ -89,5 +89,41 @@ class NewVisitorTest(unittest.TestCase):
 			self.browser.getCurrentUrl()
 		)
 
+	# employee opens orders list page and checks title
+	def test_can_open_orders_list_page(self):
+		self.browser.get('http://localhost:8000/orders_list_page')
+		self.assertIn('Orders - List', self.browser.title)
+		self.assertEqual(
+			'http://localhost:8000/orders_list_page',
+			self.browser.getCurrentUrl()
+		)
+
+	# employee opens orders detail page and checks title
+	def test_can_open_orders_detail_page(self):
+		self.browser.get('http://localhost:8000/orders_detail_page')
+		self.assertIn('Orders - Detail', self.browser.title)
+		self.assertEqual(
+			'http://localhost:8000/orders_detail_page',
+			self.browser.getCurrentUrl()
+		)
+
+	# employee opens orders update form page and checks title
+	def test_can_open_orders_update_form_page(self):
+		self.browser.get('http://localhost:8000/orders_update_form_page')
+		self.assertIn('Orders - Update', self.browser.title)
+		self.assertEqual(
+			'http://localhost:8000/orders_update_form_page',
+			self.browser.getCurrentUrl()
+		)
+
+	# employee opens orders create form page and checks title
+	def test_can_open_orders_create_form_page(self):
+		self.browser.get('http://localhost:8000/orders_create_form_page')
+		self.assertIn('Orders - Create', self.browser.title)
+		self.assertEqual(
+			'http://localhost:8000/orders_create_form_page',
+			self.browser.getCurrentUrl()
+		)
+
 if __name__ == '__main__':
 	unittest.main(warnings = 'ignore')
