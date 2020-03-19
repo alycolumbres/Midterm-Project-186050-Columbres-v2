@@ -12,7 +12,7 @@ class NewVisitorTest(unittest.TestCase):
 		self.browser.quit()
 
 	# initial testing
-	def test_can_open_homepage(self):
+	def test_can_open_browser(self):
 		self.browser.get('http://localhost:8000')
 
 if __name__ == '__main__':
