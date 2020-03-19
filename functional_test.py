@@ -12,9 +12,9 @@ class NewVisitorTest(unittest.TestCase):
 		self.browser.quit()
 
 	# employee opens website and sees the title
-	#def test_can_open_website(self):
-	#	self.browser.get('http://localhost:8000')
-	#	self.assertIn('The Good Place FroYo Shop', self.browser.title)
+	def test_can_open_website(self):
+		self.browser.get('http://localhost:8000')
+		self.assertIn('The Good Place FroYo Shop', self.browser.title)
 
 	# employee opens ingredients list page and checks title
 	# NOTE: unit testing ALL tests returns an error because a queryset is not implemented
